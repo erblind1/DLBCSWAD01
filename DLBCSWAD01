@@ -1,0 +1,144 @@
+   <!DOCTYPE html>
+  <html>
+
+  <head>
+      <meta charset="utf-8">
+      <style type="text/css">
+          body {
+              background: #fdfff5;
+          }
+
+          .center{
+              max-width: 400px;
+              width: 100%;
+              margin: 0 auto;
+              padding:5px 15px;
+              position: relative;
+              border: 1px solid black;
+          }
+
+          .header{
+            
+            width: 23.49%;
+            align-content: center;
+            padding: 1.5em 2.5em;
+            border-bottom: 1px solid grey; 
+            background: #003366;
+            color: white;
+            margin-left: 35.65%;
+          }
+
+          #button{
+              cursor: pointer;
+              width: 100%;
+              border: none;
+              background: #003366;
+              color: white;
+              margin: 0 0 5px;
+              padding: 10px;
+              font-size: 14px;
+          }
+      </style>
+      <script>
+          function warning() {
+              var confirmation;
+              if (confirm("Do you want to proceed with this order?")) {
+                  window.alert("The order was made successfully!");
+              } else {
+                  window.alert("Order failed!");
+              }
+          }
+      </script>
+  </head>
+  <body>
+      <div class="header">
+        <h1 align="center">Order form</h1>
+      </div>
+      <div class="center">
+      <form method="post">
+          <section>
+              <h2 align="center">Contact information</h2>
+
+              <p>
+                  <label for="name">
+                      <p>Contact Name: </p>
+                  </label>
+                  <input type="text" id="name" required="true" name="name" placeholder="Erblind Morina">
+                </p>
+                <p>
+                  <label for="department">
+                      <p>Department: </p>
+                  </label>
+                  <input type="text" id="department" required="true" name="department" placeholder="IT Department">
+              </p>
+              <p>
+                  <label for="phone">
+                      <p>Phone: </p>
+                  </label>
+                  <input type="text" id="phone" name="phone" required="true" placeholder="### ### ###">
+              </p>
+              <p>
+                  <label for="email">
+                      <p>E-mail: </p>
+                  </label>
+                  <input type="text" required="true" id="email" name="email" placeholder="emorina@em-tech.com">
+              </p>
+          </section>
+
+          <section >
+              <h2 align="center">Select the products you need</h2>
+
+
+              <p>
+                  <label for="computer">
+                  </label>
+                  <input type="checkbox" required="true" id="computer" name="computer">
+                  <span></span>Computer
+              </p>
+              <p>
+                  <label for="keyboard">
+                  </label>
+                  <input type="checkbox" required="true" id="keyboard" name="keyboard">
+                  <span>Monitor</span>
+              </p>
+              <p>
+                  <label for="mouse">
+                  </label>
+                  <input type="checkbox" required="true" id="mouse" name="mouse">
+                  <span>Mouse</span>
+              </p>
+              <p>
+                  <label for="headphones">
+                  </label>
+                  <input type="checkbox" required="true" id="headphones" name="headphones">
+                  <span>Headphones</span>
+              </p>
+              <p>
+                  <label for="USB">
+                  </label>
+                  <input type="checkbox" required="true" id="usb" name="usb">
+                  <span>USB</span>
+              </p>
+          </section>
+          <section>
+            <p>
+                <label for="comments">
+                </label>
+                <p>Additional information:</p>
+                <textarea rows="5" cols="25" id="comments"></textarea>
+
+            </p>
+              <p>
+                  <label for="terms">
+                  </label>
+                  <input type="checkbox" required="true" id="terms" name="terms">
+                  <span>I agree with the Terms &amp Conditions</span>
+              </p>
+          </section>
+          <section>
+              <p> <button id="button" onclick="warning()" type="submit">Order</button> </p>
+          </section>
+      </form>
+    </div>
+  </body>
+  </html>
